@@ -1,0 +1,215 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* clerk user button adjust */
+
+.cl-avatarBox {
+  width: 3rem;
+  height: 3rem;
+}
+
+/* carousel arrow  */
+.arrows {
+  height: 40px;
+  width: 40px;
+  margin: 1px;
+}
+
+@media screen and (min-width:857px) and (max-width: 1024px) {
+
+  /* navbar */
+
+  .navbar {
+    padding: 0.5rem 1rem;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+    margin-left: 10px;
+  }
+
+  .lists {
+    font-size: 1.0rem;
+  }
+
+  .shop {
+    width: 20px;
+    height: 20px;
+  }
+
+  .num {
+    font-size: 0.8rem;
+  }
+
+  .mail {
+    width: 20px;
+    height: 20px;
+  }
+
+  .heading {
+    font-size: 1.1rem;
+  }
+
+  .list {
+    margin-left: 20px;
+    font-size: 1.1rem;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .text {
+    font-size: 0.7rem;
+  }
+
+}
+
+
+@media screen and (min-width:768px) and (max-width: 1056px) {
+
+  .Iocart {
+    width: 20px;
+    height: 20px;
+  }
+
+  .addcart {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (min-width:768px) and (max-width: 857px) {
+
+
+  .logo {
+    font-size: 1.3rem;
+    margin-left: 10px;
+  }
+
+  .map {
+    width: 15px;
+    height: 20px;
+  }
+
+  .location {
+    font-size: 0.8rem;
+  }
+
+  .lists {
+    font-size: 0.9rem;
+  }
+
+  .address {
+    font-size: 0.9rem;
+  }
+
+  .navlinks {
+    gap: 28px 15px;
+  }
+
+  .signbtn {
+    font-size: 0.9rem;
+  }
+
+  .ullink {
+    gap: 28px 20px;
+  }
+
+  .shop {
+    width: 15px;
+    height: 20px;
+  }
+
+  .num {
+    font-size: 0.7rem;
+  }
+
+  .mail {
+    width: 15px;
+    height: 15px;
+  }
+
+  .box {
+    gap: 0px 10px;
+  }
+
+  .heading {
+    font-size: 0.9rem;
+  }
+
+  .list {
+    margin-left: 10px;
+    font-size: 1.1rem;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .text {
+    font-size: 0.7rem;
+  }
+
+  .inputbox {
+    padding: 4px;
+  }
+
+  .inputbtn {
+    padding: 4px;
+  }
+}
+
+@media screen and (min-width:320px) and (max-width: 425px) {
+
+  .logo {
+    font-size: 1.2rem;
+    margin-left: 10px;
+  }
+
+  .shop {
+    width: 20px;
+    height: 20px;
+  }
+
+  .num {
+    font-size: 0.8rem;
+  }
+
+  .cartbox {
+    padding: 10px;
+  }
+
+  .imge {
+    width: 50px;
+    height: 50px;
+  }
+
+  .pera {
+    font-size: 0.8rem;
+  }
+
+  .adddelete {
+    padding: 2px;
+  }
+
+  .trash {
+    width: 20px;
+    height: 20px;
+  }
+
+}
+
+@media screen and (min-width:320px) and (max-width: 378px) {
+
+  .data,
+  .rate {
+    font-size: 0.7rem;
+  }
+
+  .Iocart {
+    width: 20px;
+    height: 20px;
+  }
+
+  .addcart {
+    font-size: 0.8rem;
+  }
+
+}
