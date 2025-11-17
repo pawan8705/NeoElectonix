@@ -11,9 +11,9 @@ export const DataProvider = ({ children }) => {
     // fetching all products from api
     const fetchAllProducts = async () => {
         try {
-           const res = await axios.get('https://fakestoreapi.com/products?limit=150')
+           const res = await axios.get('https://grsdfdqqyaqayzjlqxcx.supabase.co/functions/v1/products?limit=600')
            console.log(res);
-           const productsData = res.data.products
+           const productsData = res.data
            setData(productsData)
            
         } catch (error) {
