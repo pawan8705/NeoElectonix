@@ -14,8 +14,8 @@ const SingleProduct = () => {
 
     const getSingleProduct = async () => {
         try {
-            const res = await axios.get(`https://fakestoreapi.in/api/products/${params.id}`)
-            const product = res.data.product;
+            const res = await axios.get(`https://grsdfdqqyaqayzjlqxcx.supabase.co/functions/v1/products/${params.id}`);
+            const product = res.data;
             setSingleProduct(product)
         } catch (error) {
             console.log(error);
@@ -36,9 +36,9 @@ const SingleProduct = () => {
                     <div className='max-w-6xl mx-auto md:p-6 grid grid-cols-1 md:grid-cols-2 gap-10'>
                         {/* product image */}
                         <div className='w-full'>
-                            <img src={SingleProduct.image} 
+                            <img src={SingleProduct.thumbnail} 
                             alt={SingleProduct.title} 
-                            className='rounded-2xl w-full object-cover'/>
+                            className='rounded-2xl w-[300px] h-[250px] object-cover'/>
                         </div>
                         {/* product details */}
                         <div className='flex flex-col gap-6'>
