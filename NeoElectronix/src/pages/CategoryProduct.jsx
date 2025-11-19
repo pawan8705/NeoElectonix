@@ -11,15 +11,40 @@ const CategoryProduct = () => {
   const category = params.category
   const navigate = useNavigate()
 
+// IMAGE VALIDATION FUNCTION
+    const validateImage = (url) => {
+        return new Promise((resolve) => {
+            const img = new Image();
+            img.src = url;
+
+            img.onload = () => resolve(true);
+            img.onerror = () => resolve(false);
+        });
+    };  
+
+
   const getFilterData = async ()=>{
     try {
-      const res = await axios.get(`https://fakestoreapi.in/api/products/category?type=${category}`)
-      const data = res.data.products
-      setSearchData(data)
+      const res = await axios.get("https://grsdfdqqyaqayzjlqxcx.supabase.co/functions/v1/products/",{
+        params: {
+          categoryType: category
+        }
+      });
+      const data = res.data;
+       // FILTER VALID IMAGE PRODUCTS
+            const validatedProducts = [];
+
+            for (let product of data) {
+                const isValid = await validateImage(product.thumbnail);
+                if (isValid) {
+                    validatedProducts.push(product);
+                }
+            }
+      setSearchData(validatedProducts)
 
     } catch (error) {
       console.log(error);
-      
+      setSearchData([])
     }
   }
 
